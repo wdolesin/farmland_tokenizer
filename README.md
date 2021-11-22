@@ -13,6 +13,13 @@
 
 ***
 ## <a id="Project-Description">Project Description</a>
+# Famrlan Tokenizer 
+<p> Owning a farm for retail investors can be very difficult, as can selling a farm. The Farmland Tokenizer will enable all parties to seemingliy transact ownership in farmland through our dApp, where a marketplace can exist based on supply and demand direct from retail invrestor to owner
+</p>
+
+<p>
+Both stocks and the real estate market have seen unprecidented gains in recent years and with the recent injection of new money into the economy, concerns over inflation and increasing diversification in ones portfolio, have both gained interested in the minds of investors. The Famrland Tokenizer will allow for a hedge against inflation and created addded diversification.
+</p>
 
 ***
 ## <a id="Resources">Technologies and Resources</a>
