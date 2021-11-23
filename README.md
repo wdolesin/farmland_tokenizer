@@ -42,7 +42,7 @@ To summarize in more detail, farmland has:
 * [Streamlit](https://docs.streamlit.io/library/get-started)
 
 ***
-## <a id="Resources">Technologies and Resources</a>
+## <a id="Resources">Resources</a>
 [1950 to 1994 Annual Price/Acre](https://www.ers.usda.gov/media/8648/sb738ab.xls)
 
 [Average U.S. farm real estate value, nominal and real (inflation adjusted), 1970-2020](https://www.ers.usda.gov/webdocs/charts/55910/farmrealestatevalue2020_d.html?v=1175.2)
