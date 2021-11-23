@@ -14,7 +14,7 @@
 ***
 ## <a id="Project-Description">Project Description</a>
 # Famrlan Tokenizer 
-<p> Owning a farm for retail investors can be very difficult, as can selling a farm. The Farmland Tokenizer will enable all parties to seemingliy transact ownership in farmland through our dApp, where a marketplace can exist based on supply and demand direct from retail invrestor to owner
+<p> Owning a farm for retail investors can be very difficult, as can selling one. The Farmland Tokenizer will enable all parties to seemingliy transact ownership in farmland through our dApp, where a marketplace can exist based on supply and demand direct from retail invrestor to owner.
 </p>
 
 <p>
@@ -23,12 +23,17 @@ Both stocks and the real estate market have seen unprecidented gains in recent y
 
 ***
 ## <a id="Resources">Technologies and Resources</a>
+[1950 to 1994 Annual Price/Acre](https://www.ers.usda.gov/media/8648/sb738ab.xls)
+[Average U.S. farm real estate value, nominal and real (inflation adjusted), 1970-2020](https://www.ers.usda.gov/webdocs/charts/55910/farmrealestatevalue2020_d.html?v=1175.2)
+
+[DATA SOURCE 1 for CSV](https://usda.library.cornell.edu/concern/publications/pn89d6567?locale=en#release-items)
 
 ***
 ## <a id="Usage">Usage</a>
 
 ***
 ## <a id="Contributors">Contributors</a>
+
 
 ***
 ## <a id="License">License</a>
