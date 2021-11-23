@@ -47,18 +47,22 @@ To summarize in more detail, farmland has:
 
 [Average U.S. farm real estate value, nominal and real (inflation adjusted), 1970-2020](https://www.ers.usda.gov/webdocs/charts/55910/farmrealestatevalue2020_d.html?v=1175.2)
 
-[DATA SOURCE 1 for CSV](https://usda.library.cornell.edu/concern/publications/pn89d6567?locale=en#release-items)
+[USDA Agricultural Land Values](https://usda.library.cornell.edu/concern/publications/pn89d6567?locale=en#release-items)
 
-[DATA SOURCE 2 for CSV](https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/technical/econ/references/?cid=nrcs143_009723)
+[USDA Value of Land and Building Per Acre](https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/technical/econ/references/?cid=nrcs143_009723)
 ***
 ## <a id="Usage">Usage</a>
 
 ***
 ## <a id="Contributors">Contributors</a>
-
+* Ksenia Gorska 
+* Kevin Mau 
+* Sangram Singh 
+* William Olesinski
 
 ***
 ## <a id="License">License</a>
+This project was licensed under the MIT License. 
 
 
 [Top of Page](#Top-of-Page)<br>
