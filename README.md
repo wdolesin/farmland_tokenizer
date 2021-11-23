@@ -30,6 +30,10 @@ To summarize in more detail, farmland has:
 * (1) Historically Attractive Returns (1992 - 2020 / 11.01%)
 * (2) Low Volatility of Returns (1992 - 2020 / 6.9%)
 
+  ![image](https://user-images.githubusercontent.com/85215301/142964652-a09d90e0-83b3-4aea-aa37-0fb0a1234b54.png)
+
+  
+
 </p>
 
 ***
