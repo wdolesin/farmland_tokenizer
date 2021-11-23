@@ -13,7 +13,7 @@
 
 ***
 ## <a id="Project-Description">Project Description</a>
-# Famrlan Tokenizer 
+# Farmland Tokenizer 
 Background
 <p> Owning a farm for retail investors can be very difficult, as can selling one. The Farmland Tokenizer will enable all parties to seemingliy transact ownership in farmland through our dApp, where a marketplace can exist based on supply and demand direct from retail invrestor to owner.
 </p>
