@@ -25,8 +25,8 @@ With the global population expected to reach 9 billion in 2040 the future outloo
 According to the US Department of Agriculture the average price of an acre of U.S. cropland has risen about 75% over the last 15 years (NY Times 2021). Moreover, according to Forbes(2021) farmland has delivered a higher average annual return than most asset classes in the last 29 years (1992-2020). 
 
 To summarize in more detail, farmland has:
-(1) Historically Attractive Returns (1992 - 2020 / 11.01%)
-(2) Low Volatility of Returns (1992 - 2020 / 6.9%)
+* (1) Historically Attractive Returns (1992 - 2020 / 11.01%)
+* (2) Low Volatility of Returns (1992 - 2020 / 6.9%)
 
 </p>
 
