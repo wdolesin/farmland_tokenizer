@@ -16,59 +16,106 @@ w3 = Web3(Web3.HTTPProvider(os.getenv("WEB3_PROVIDER_URI")))
 # 2. Connects to the contract using the contract address and ABI
 ################################################################################
 
-
 @st.cache(allow_output_mutation=True)
-def load_contract():
+def load_crowdsale_contract(contract_compiled_abi_file_name, env_variable):
 
-    # Load Art Gallery ABI
-    # @TODO: YOUR CODE HERE!
-    with open(Path('./contracts/compiled/certificate_abi.json')) as f:
-        certificate_abi = json.load(f)
+    # Load The Contract ABI
+    with open(Path(contract_compiled_abi_file_name)) as abi_file_name:
+        abi = json.load(abi_file_name)
 
+    
     # Set the contract address (this is the address of the deployed contract)
-    contract_address = os.getenv("SMART_CONTRACT_ADDRESS")
+    contract_address = os.getenv(env_variable)
 
     # Get the contract using web3
     contract = w3.eth.contract(
             address=contract_address,
-            abi=certificate_abi
+            abi=abi
+            #bytecode = bytecode
         )
 
     return contract
 
+# Load the crowdsale and token contracts
+crowdsale_contract = load_crowdsale_contract("./contracts/compiled/farmland_token_crowdsale_abi.json",
+                                            "SMART_CONTRACT_CROWDSALE_ADDRESS")
+token_contract = load_crowdsale_contract("./contracts/compiled/farmland_token_abi.json",
+                                            "SMART_CONTRACT_TOKEN_ADDRESS")
 
-# Load the contract
-contract = load_contract()
+accounts = w3.eth.accounts
+farmers_account = accounts[0]
 
+st.markdown("# The Farmland Crowdsale")
+
+farmland_options = ["Crowdsale status", "Purchase tokens"]
+
+# farmland_options_df = pd.DataFrame(farmland_options)
+# st.write(pychain_df)
+
+# difficulty = st.sidebar.slider("Block Difficulty", 1, 5, 2)
+# pychain.difficulty = difficulty
+
+st.sidebar.write("# Option Selected")
+selected_option = st.sidebar.selectbox(
+    "Which option would you like to choose?", farmland_options
+)
+
+st.sidebar.write(selected_option)
+
+if selected_option == "Crowdsale status":
+    st.image("./Images/5544_1.png")
+    parcelDetails = token_contract.functions.parcelDetails().call()
+    st.write(f"## Parcel Details           :{parcelDetails}")
+    parcelOwner = token_contract.functions.parceOwner().call()
+    st.write(f"## Parcel Owner             :{parcelOwner}")
+    parcelAcres = token_contract.functions.totalAcres().call()
+    st.write(f"## Parcel Acres             :{parcelAcres}")
+    name = token_contract.functions.name().call()
+    st.write(f"## Name                     :{name}")
+    symbol = token_contract.functions.symbol().call()
+    st.write(f"## Symbol                   :{symbol}")
+    cap = crowdsale_contract.functions.cap().call()
+    st.write(f"## Total Tokens             :{cap}")
+    total_token_available = token_contract.functions.totalSupply().call()
+    st.write(f"## Total Tokens Issued      :{total_token_available}")
+    weiRaised = crowdsale_contract.functions.weiRaised().call()
+    st.write(f"## Wei Raised               :{weiRaised}")
+    openingTime = crowdsale_contract.functions.openingTime().call()
+    st.write(f"## Opening Time             :{openingTime}")
+    closingTime = crowdsale_contract.functions.closingTime().call()
+    st.write(f"## Closing Time             :{closingTime}")
+    currentTime = crowdsale_contract.functions.currentTime().call()
+    st.write(f"## Current Time             :{currentTime}")
+else:
+    purchasers_tokens = st.text_input("Enter tokens desired")
+st.write(crowdsale_contract)
+st.write(token_contract)
+# st.write(crowdsale)
 
 ################################################################################
 # Award Certificate
 ################################################################################
 
-accounts = w3.eth.accounts
-account = accounts[0]
-# Select or enter a recipient address using a Streamlit component
-student_account = st.selectbox("Select Account", options=accounts)
 # Enter a text string for the certificate or link to digital certificate location
-certificate_details = st.text_input("The URI to the certificate")
-if st.button("Award Certificate"):
-    # Call the awardCertificate function with web3
-    # @TODO: YOUR CODE HERE!
-    tx_hash = contract.functions.awardCertificate(student_account, certificate_details).transact({
-        "from":student_account,
-        "gas":1000000
-    })
+#certificate_details = st.text_input("The URI to the certificate")
+#if st.button("Award Certificate"):
+#    # Call the awardCertificate function with web3
+#    # @TODO: YOUR CODE HERE!
+#    tx_hash = contract.functions.awardCertificate(student_account, certificate_details).transact({
+#        "from":student_account,
+#        "gas":1000000
+#    })
 
 ################################################################################
 # Display Certificate
 ################################################################################
-certificate_id = st.number_input("Enter a Certificate Token ID to display", value=0, step=1)
+#certificate_id = st.number_input("Enter a Certificate Token ID to display", value=0, step=1)
 # @TODO: YOUR CODE HERE!
-if st.button("Display Certificate"):
-    # Get the certificate owner
-    certificate_owner = contract.functions.ownerOf(certificate_id).call()
-    st.write(f"The certificate was awarded to {certificate_owner}")
-    # Get the certificate's URI
-    certificate_uri = contract.functions.tokenURI(certificate_id).call()
-    st.write(f"The certificate's tokenURI metadata is {certificate_uri}")
-    st.image(certificate_uri)
+#if st.button("Display Certificate"):
+#    # Get the certificate owner
+#    certificate_owner = contract.functions.ownerOf(certificate_id).call()
+#    st.write(f"The certificate was awarded to {certificate_owner}")
+#    # Get the certificate's URI
+#    certificate_uri = contract.functions.tokenURI(certificate_id).call()
+#    st.write(f"The certificate's tokenURI metadata is {certificate_uri}")
+#    st.image(certificate_uri)

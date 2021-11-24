@@ -12,6 +12,10 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5
 
 // Create a constructor for the KaseiCoin contract and have the contract inherit the libraries that you imported from OpenZeppelin.
 contract FarmlandToken is ERC20, ERC20Detailed, ERC20Mintable {
+    string private _parcelDetails = "San Joaquin #5544";
+    string private _parcelOwner = "Sangram";
+    uint16 private _totalAcres = 40;
+    
     constructor(
         string memory name,
         string memory symbol,
@@ -22,4 +26,17 @@ contract FarmlandToken is ERC20, ERC20Detailed, ERC20Mintable {
     {
         // Left Empty
     }
+
+    function parcelDetails() public view returns (string memory) {
+        return _parcelDetails;
+    }
+
+    function parcelOwner() public view returns (string memory) {
+        return _parcelOwner;
+    }
+
+    function totalAcres() public view returns (uint16) {
+        return _totalAcres;
+    }
+
 }
