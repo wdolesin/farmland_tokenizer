@@ -90,21 +90,36 @@ else:
     accounts = w3.eth.accounts
     purchasers_account = accounts[0]
     purchasers_account = st.selectbox("Select Account", options=accounts)
-
+    crowdsale_contract_address = os.getenv("SMART_CONTRACT_CROWDSALE_ADDRESS")
     tokens_desired = int(st.number_input("Enter tokens desired"))
     wallet = crowdsale_contract.functions.wallet().call()
     st.write(f"### Wallet is {wallet}")
+    symbol = token_contract.functions.symbol().call()
+    cap = crowdsale_contract.functions.cap().call()
+    st.write(f"## Total {symbol} Tokens             : {cap}")
+    total_token_available = token_contract.functions.totalSupply().call()
+    st.write(f"## Total {symbol} Tokens Issued      : {total_token_available}")
+    balance = token_contract.functions.balanceOf(purchasers_account).call()
+    st.write(f"## This account currently holds {balance} {symbol} tokens")
     if st.button("Get Wei Estimate"):
         rate = crowdsale_contract.functions.rate().call()
         st.write(f"## rate : {rate}")
         wei_estimate = crowdsale_contract.functions.getWeiEstimate(tokens_desired).call()
-        st.write(f"## Wei Estimate for {tokens_desired} tokens : {wei_estimate}")
+        st.write(f"## Wei Estimate for {tokens_desired} tokens : {wei_estimate}")    
     if st.button("Purchase"):
         st.write(f"Purchasing {tokens_desired} tokens ....")
+        wei_estimate = crowdsale_contract.functions.getWeiEstimate(tokens_desired).call()
+        st.write(f"## Wei Estimate for {tokens_desired} tokens : {wei_estimate}")
+        
         tx_hash = crowdsale_contract.functions.buyTokens(purchasers_account).transact({
             "from":purchasers_account,
-            "gas":1000000
+            "gas":1000000,
+            "to":crowdsale_contract_address,
+            "gasPrice":0,
+            "value":wei_estimate
         })
+        w3.eth.wait_for_transaction_receipt(tx_hash)
+        st.write(f"## Done purchasing {tokens_desired} tokens")
 
 
 ################################################################################
