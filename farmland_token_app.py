@@ -94,22 +94,24 @@ else:
     tokens_desired = int(st.number_input("Enter tokens desired"))
     wallet = crowdsale_contract.functions.wallet().call()
     st.write(f"### Wallet is {wallet}")
+    st.write(f"### Wallet's balance is {w3.eth.getBalance(wallet)} weis")
     symbol = token_contract.functions.symbol().call()
     cap = crowdsale_contract.functions.cap().call()
-    st.write(f"## Total {symbol} Tokens             : {cap}")
+    st.write(f"### Total {symbol} Tokens             : {cap}")
     total_token_available = token_contract.functions.totalSupply().call()
-    st.write(f"## Total {symbol} Tokens Issued      : {total_token_available}")
+    st.write(f"### Total {symbol} Tokens Issued      : {total_token_available}")
     balance = token_contract.functions.balanceOf(purchasers_account).call()
-    st.write(f"## This account currently holds {balance} {symbol} tokens")
+    st.write(f"### This account currently holds {balance} {symbol} tokens")
+    st.write(f"### account balance is {w3.eth.getBalance(purchasers_account)} weis")
     if st.button("Get Wei Estimate"):
         rate = crowdsale_contract.functions.rate().call()
-        st.write(f"## rate : {rate}")
+        st.write(f"### rate : {rate}")
         wei_estimate = crowdsale_contract.functions.getWeiEstimate(tokens_desired).call()
-        st.write(f"## Wei Estimate for {tokens_desired} tokens : {wei_estimate}")    
+        st.write(f"### Wei Estimate for {tokens_desired} tokens : {wei_estimate}")    
     if st.button("Purchase"):
         st.write(f"Purchasing {tokens_desired} tokens ....")
         wei_estimate = crowdsale_contract.functions.getWeiEstimate(tokens_desired).call()
-        st.write(f"## Wei Estimate for {tokens_desired} tokens : {wei_estimate}")
+        st.write(f"### Wei Estimate for {tokens_desired} tokens : {wei_estimate}")
         
         tx_hash = crowdsale_contract.functions.buyTokens(purchasers_account).transact({
             "from":purchasers_account,
@@ -119,7 +121,9 @@ else:
             "value":wei_estimate
         })
         w3.eth.wait_for_transaction_receipt(tx_hash)
-        st.write(f"## Done purchasing {tokens_desired} tokens")
+        st.write(f"### Done purchasing {tokens_desired} tokens")
+        st.write(f"### Wallet balance now is {w3.eth.getBalance(wallet)} weis")
+        st.write(f"### account balance now is {w3.eth.getBalance(purchasers_account)} weis")
 
 
 ################################################################################
