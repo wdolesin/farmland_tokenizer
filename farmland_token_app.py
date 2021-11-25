@@ -42,9 +42,6 @@ crowdsale_contract = load_crowdsale_contract("./contracts/compiled/farmland_toke
 token_contract = load_crowdsale_contract("./contracts/compiled/farmland_token_abi.json",
                                             "SMART_CONTRACT_TOKEN_ADDRESS")
 
-accounts = w3.eth.accounts
-farmers_account = accounts[0]
-
 st.markdown("# The Farmland Crowdsale")
 
 farmland_options = ["Crowdsale status", "Purchase tokens"]
@@ -65,32 +62,50 @@ st.sidebar.write(selected_option)
 if selected_option == "Crowdsale status":
     st.image("./Images/5544_1.png")
     parcelDetails = token_contract.functions.parcelDetails().call()
-    st.write(f"## Parcel Details           :{parcelDetails}")
-    parcelOwner = token_contract.functions.parceOwner().call()
-    st.write(f"## Parcel Owner             :{parcelOwner}")
+    st.write(f"## Parcel Details           : {parcelDetails}")
+    parcelOwner = token_contract.functions.parcelOwner().call()
+    st.write(f"## Parcel Owner             : {parcelOwner}")
     parcelAcres = token_contract.functions.totalAcres().call()
-    st.write(f"## Parcel Acres             :{parcelAcres}")
+    st.write(f"## Parcel Acres             : {parcelAcres}")
     name = token_contract.functions.name().call()
-    st.write(f"## Name                     :{name}")
+    st.write(f"## Name                     : {name}")
     symbol = token_contract.functions.symbol().call()
-    st.write(f"## Symbol                   :{symbol}")
+    st.write(f"## Symbol                   : {symbol}")
     cap = crowdsale_contract.functions.cap().call()
-    st.write(f"## Total Tokens             :{cap}")
+    st.write(f"## Total Tokens             : {cap}")
     total_token_available = token_contract.functions.totalSupply().call()
-    st.write(f"## Total Tokens Issued      :{total_token_available}")
+    st.write(f"## Total Tokens Issued      : {total_token_available}")
     weiRaised = crowdsale_contract.functions.weiRaised().call()
-    st.write(f"## Wei Raised               :{weiRaised}")
+    st.write(f"## Wei Raised               : {weiRaised}")
     openingTime = crowdsale_contract.functions.openingTime().call()
-    st.write(f"## Opening Time             :{openingTime}")
+    st.write(f"## Opening Time             : {openingTime}")
     closingTime = crowdsale_contract.functions.closingTime().call()
-    st.write(f"## Closing Time             :{closingTime}")
+    st.write(f"## Closing Time             : {closingTime}")
     currentTime = crowdsale_contract.functions.currentTime().call()
-    st.write(f"## Current Time             :{currentTime}")
+    st.write(f"## Current Time             : {currentTime}")
 else:
-    purchasers_tokens = st.text_input("Enter tokens desired")
-st.write(crowdsale_contract)
-st.write(token_contract)
-# st.write(crowdsale)
+################################################################################
+# Purchase Tokens
+################################################################################
+    accounts = w3.eth.accounts
+    purchasers_account = accounts[0]
+    purchasers_account = st.selectbox("Select Account", options=accounts)
+
+    tokens_desired = int(st.number_input("Enter tokens desired"))
+    wallet = crowdsale_contract.functions.wallet().call()
+    st.write(f"### Wallet is {wallet}")
+    if st.button("Get Wei Estimate"):
+        rate = crowdsale_contract.functions.rate().call()
+        st.write(f"## rate : {rate}")
+        wei_estimate = crowdsale_contract.functions.getWeiEstimate(tokens_desired).call()
+        st.write(f"## Wei Estimate for {tokens_desired} tokens : {wei_estimate}")
+    if st.button("Purchase"):
+        st.write(f"Purchasing {tokens_desired} tokens ....")
+        tx_hash = crowdsale_contract.functions.buyTokens(purchasers_account).transact({
+            "from":purchasers_account,
+            "gas":1000000
+        })
+
 
 ################################################################################
 # Award Certificate

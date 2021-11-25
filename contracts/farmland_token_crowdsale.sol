@@ -23,8 +23,7 @@ contract FarmlandTokenCrowdsale is Crowdsale, MintedCrowdsale, CappedCrowdsale, 
         uint open, // the crowdsale opening time
         uint close // the crowdsale closing time
     )
-    // FarmlandToken("FarmLand", "FRM", 12000)
-    // FarmlandToken(name, symbol, initialSupply)
+
     Crowdsale(initialRate, wallet, token)
     CappedCrowdsale(goal)
     TimedCrowdsale(open, close)
@@ -53,5 +52,9 @@ contract FarmlandTokenCrowdsale is Crowdsale, MintedCrowdsale, CappedCrowdsale, 
     
     function _getTokenAmount(uint256 weiAmount) internal view returns (uint256) {
         return weiAmount.mul(currentRate);
+    }
+
+    function getWeiEstimate(uint256 tokenAmount) public view returns (uint256) {
+        return tokenAmount.mul(currentRate);
     }
 }
