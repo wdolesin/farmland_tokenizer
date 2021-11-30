@@ -5,6 +5,7 @@
 ## <a id="Contents">Cotents</a>
 [Project Description](#Project-Description)<br>
 [Technologies](#Technologies)<br>
+[Installation guide](#Installation-guide) <br>
 [Resources](#Resources)<br>
 [Usage](#Usage)<br>
 [Contributors](#Contributors)<br>
@@ -43,8 +44,47 @@ To summarize in more detail, farmland has:
 * [Pandas](https://pandas.pydata.org/docs/)
 * [Matplotlib](https://matplotlib.org/3.1.0/contents.html)
 * [Prophet](https://facebook.github.io/prophet/docs/quick_start.html)
+* [Tensorflow](https://www.tensorflow.org)
+* [Keras](https://keras.io/about/)
 * [Solidity](https://docs.soliditylang.org/en/v0.8.10/)
 * [Streamlit](https://docs.streamlit.io/library/get-started)
+
+***
+
+## <a id="Installation guide">Installation guide</a>
+
+The files containing the analysis of the farmland in the US and California leverage python 3.7 with the following libraries and dependencies:
+
+``` python
+pip install python-dotenv
+pip install alpaca-trade-api
+pip install matplotlib
+
+```
+
+In order to run the application you need to set up an Alpaca Markets account and obtain your perosnal API keys. You use these unique identifiers to establish an authenticated, secure connection to an API. For the security reasons you should store your unique API keys in a hidden file called .env This file protects the content of the file by hiding it in the structure of the project. To display hidden files in Jupyterlab run the following command in your terminal:
+
+```python
+jupyter lab --ContentsManager.allow_hidden=True
+```
+
+The project accesses the Alpaca API keys from the environment variables, and stores it in a Python variables named alpaca_api_key and alpaca_secret_api_key.
+
+---
+The analysis and price prediction of the Invesco DB Agriculture Fund "DBA" leverages python 3.7 with the following libraries and dependencies:
+
+* Tensorflow - a free and open-source software library for machine learning and artificial intelligence. It can be used across a range of tasks but has a particular focus on training and inference of deep neural networks
+
+* Keras - a popular deep learning framework that serves as a high-level API for TensorFlow. Keras is now included with TensorFlow 2.0
+
+```python
+pip install --upgrade tensorflow
+```
+
+---
+
+
+
 
 ***
 ## <a id="Resources">Resources</a>
