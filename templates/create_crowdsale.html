@@ -1,0 +1,70 @@
+{% extends "templates/base_template.html" %}
+{% block title %}Your Dapp{% endblock %}
+{% block head%}
+{% endblock %}
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Create Crowdsale</h1>
+      <hr>
+      <div class="mb-3">
+        <div class="form-group">
+            <hr>
+            <div class="input-group mb-3">
+              <input disabled = "false" id="parcelOwner" type="text" class="form-control" placeholder="Parcel Owner" aria-label="Email" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <input disabled = "false" id="parcelDetails" type="text" class="form-control" placeholder="Parcel Details" aria-label="Email" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mb-3">
+            <input disabled = "true" id="totalAcres" type="text" class="form-control" placeholder="Total Acres" aria-label="Email" aria-describedby="basic-addon1">
+          </div>
+            <div class="input-group mb-3">
+                <input disabled = "false" id="name" type="text" class="form-control" placeholder="Name" aria-label="Email" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <input disabled = "false" id="symbol" type="text" class="form-control" placeholder="Symbol" aria-label="Email" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <input disabled = "true" id="initialSupply" type="text" class="form-control" placeholder="Initial Supply" aria-label="Email" aria-describedby="basic-addon1">
+            </div>
+            <div>  
+              <button class="btn btn-primary" id="getWallet" onclick="get_wallet();">Get Your Wallet from Metamask</button>
+            </div>
+            <div class="input-group mb-3">
+              <input disabled = "true" id="walletAddress" type="text" class="form-control" placeholder="Wallet Address" aria-label="Email" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <input disabled = "false" id="goal" type="text" class="form-control" placeholder="Goal" aria-label="Email" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <input disabled = "false" id="rateIncrementer" type="text" class="form-control" placeholder="Rate Incrementer" aria-label="Email" aria-describedby="basic-addon1">
+            </div>
+            <div>  
+              <button class="btn btn-primary" id="startCrowdsale" onclick="start_crowdsale();">Start Crowdsale</button>
+            </div>
+            <div class="input-group mb-3">
+              <input disabled = "false" id="deployerAddress" type="text" class="form-control" placeholder="Deployer Address" aria-label="Email" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <input disabled = "false" id="tokenAddress" type="text" class="form-control" placeholder="Token Address" aria-label="Email" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <input disabled = "false" id="crowdsaleAddress" type="text" class="form-control" placeholder="Crowdsale Address" aria-label="Email" aria-describedby="basic-addon1">
+            </div>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+{% block script %}
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+  <script src="{{ url_for('static', filename='js/create_crowdsale.js') }}"></script>
+{% endblock %}
