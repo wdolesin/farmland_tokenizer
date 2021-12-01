@@ -46,7 +46,7 @@ token_contract = load_crowdsale_contract("./contracts/compiled/farmland_token_ab
 session_state = SessionState.get(name="", button_purchase=False)
 st.markdown("# The Farmland Crowdsale")
 
-farmland_options = ["Crowdsale status", "Purchase tokens", "Set Rate"]
+farmland_options = ["Crowdsale status", "Purchase tokens"]
 
 # farmland_options_df = pd.DataFrame(farmland_options)
 # st.write(pychain_df)
@@ -98,9 +98,6 @@ else:
     st.write(f"### Total {symbol} Tokens Issued      : {total_token_available}")
     st.write("")
 
-    # if (w3.eth.accounts)
-    # purchasers_account = w3.eth.getAccounts()
-    #
     accounts.append("Enter Manually")
     purchasers_account = st.selectbox("Select Account", options=accounts)
     manual_purchasers_account = st.text_input("Enter Account")
@@ -140,31 +137,3 @@ else:
         st.write(f"### Done purchasing {tokens_desired} tokens")
         st.write(f"### Wallet balance now is {w3.fromWei(w3.eth.getBalance(wallet), 'ether')} Eth")
         st.write(f"### account balance now is {w3.fromWei(w3.eth.getBalance(purchasers_account), 'ether')} Eth")
-        
-################################################################################
-# Award Certificate
-################################################################################
-
-# Enter a text string for the certificate or link to digital certificate location
-#certificate_details = st.text_input("The URI to the certificate")
-#if st.button("Award Certificate"):
-#    # Call the awardCertificate function with web3
-#    # @TODO: YOUR CODE HERE!
-#    tx_hash = contract.functions.awardCertificate(student_account, certificate_details).transact({
-#        "from":student_account,
-#        "gas":1000000
-#    })
-
-################################################################################
-# Display Certificate
-################################################################################
-#certificate_id = st.number_input("Enter a Certificate Token ID to display", value=0, step=1)
-# @TODO: YOUR CODE HERE!
-#if st.button("Display Certificate"):
-#    # Get the certificate owner
-#    certificate_owner = contract.functions.ownerOf(certificate_id).call()
-#    st.write(f"The certificate was awarded to {certificate_owner}")
-#    # Get the certificate's URI
-#    certificate_uri = contract.functions.tokenURI(certificate_id).call()
-#    st.write(f"The certificate's tokenURI metadata is {certificate_uri}")
-#    st.image(certificate_uri)
