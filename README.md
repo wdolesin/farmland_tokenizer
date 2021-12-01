@@ -37,16 +37,18 @@ To summarize in more detail, farmland has:
 
 
 Farmland as a diversifier:
-Farmland has great returns with very low volatility
+* Farmland has great returns with very low volatility
 ![Farmland Risk Return](Images/farmland_asset_class_risk_return.png)  
 
-Farmland has the best diversification ability when analyzed using return to downside volatility and/or return to maximum drawdown
+* Farmland has the best diversification ability when analyzed using return to downside volatility and/or return to maximum drawdown
 ![Farmland Diversification Rating](Images/farmland_asset_class_diversification.png)
 
 Dynamic Pricing for Crowdsale:
-change the price per token (increase or decrease) based on demand
+* change the price per token (increase or decrease) based on demand.
 
 Example:
+* Price per token changes from $40 per token to $140 per token.
+* Estimated conventional price of farm of $400K ends up earning $900K for the farmer because of the dynamic pricing
 ![Farmland Crowdsale Dynamic Pricing](Images/farmland_crowdsale_dynamic_pricing.png)
 
 
