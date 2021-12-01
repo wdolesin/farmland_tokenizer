@@ -41,13 +41,19 @@ To summarize in more detail, farmland has:
 ***
 ## <a id="Technologies">Technologies</a>
 * [Python](https://docs.python.org/release/3.8.0/)
-* [Pandas](https://pandas.pydata.org/docs/)
+* [Pandas](https://pandas.pydata.org/docs/) - Data analysis and manipulation library.
 * [Matplotlib](https://matplotlib.org/3.1.0/contents.html)
 * [Prophet](https://facebook.github.io/prophet/docs/quick_start.html)
 * [Tensorflow](https://www.tensorflow.org)
 * [Keras](https://keras.io/about/)
-* [Solidity](https://docs.soliditylang.org/en/v0.8.10/)
 * [Streamlit](https://docs.streamlit.io/library/get-started)
+* [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) - Web based user interface for data analysis.
+* [Remix](https://remix.ethereum.org/) - Remix is a browser-based compiler and IDE that enables users to build Ethereum contracts with Solidity language and to debug transactions.
+* [Solidity](https://docs.soliditylang.org/) - Solidity is an object-oriented, high-level language for implementing smart contracts. Smart contracts are programs which govern the behaviour of accounts within the Ethereum state.
+* [MetaMask](https://metamask.io/) - A crypto wallet & gateway to blockchain apps.
+* [Ganache](https://www.trufflesuite.com/ganache) - Quickly fire up a personal Ethereum blockchain which you can use to run tests, execute commands, and inspect state while controlling how the chain operates.
+* [hvplot](https://hvplot.holoviz.org/) - hvPlot provides a high-level plotting API built on HoloViews that provides a general and consistent API for plotting data
+* [Pandas](https://github.com/pandas-dev/pandas) - Data analysis and manipulation library.
 
 ***
 
@@ -80,6 +86,17 @@ The analysis and price prediction of the Invesco DB Agriculture Fund "DBA" lever
 ```python
 pip install --upgrade tensorflow
 ```
+
+Please install the following before starting the application
+
+```python
+  pip install jupyterlab
+  pip install pandas
+  pip install scikit-learn
+  pip install hvplot
+
+```
+In case of issues, please see the requirements.txt for a complete list of packages with versions needed to run this application
 
 ---
 
