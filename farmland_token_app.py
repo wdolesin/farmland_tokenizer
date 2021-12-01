@@ -11,14 +11,6 @@ load_dotenv()
 
 # Define and connect a new Web3 provider
 w3 = Web3(Web3.HTTPProvider(os.getenv("WEB3_PROVIDER_URI")))
-#w3 = Web3(Web3.HTTPProvider('http://localhost:8545'))
-
-# Define the EXTENSION PATH
-# EXTENSION_PATH = '.'
-# opt = webdriver.ChromeOptions()
-# opt.add_extension(EXTENSION_PATH)
-
-# driver = webdriver.Chrome(chrome_options=opt)
 
 ################################################################################
 # Contract Helper function:
@@ -41,7 +33,6 @@ def load_crowdsale_contract(contract_compiled_abi_file_name, env_variable):
     contract = w3.eth.contract(
             address=contract_address,
             abi=abi
-            #bytecode = bytecode
         )
 
     return contract
