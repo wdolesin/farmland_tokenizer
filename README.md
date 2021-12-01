@@ -16,15 +16,15 @@
 ## <a id="Project-Description">Project Description</a>
 # Farmland Tokenizer 
 Background
-<p> Owning a farm for retail investors can be very difficult, as can selling one. The Farmland Tokenizer will enable all parties to seemingliy transact ownership in farmland through our dApp, where a marketplace can exist based on supply and demand direct from retail invrestor to owner.
+<p> Owning a farm for retail investors can be very difficult, as can selling one. The Farmland Tokenizer will enable all parties to seamlessly transact ownership in farmland through our dApp, where a marketplace can exist based on supply and demand direct from retail investor to owner.
 </p>
 
-<p> Both stocks and the real estate market have seen unprecidented gains in recent years and with the recent injection of new money into the economy, concerns over inflation and increasing diversification in ones portfolio, have both gained interested in the minds of investors. The Farmland Tokenizer will allow for a hedge against inflation and created added diversification.
+<p> Both stocks and the real estate market have seen unprecidented gains in recent years and with the recent injection of new money into the economy, concerns over inflation and increasing diversification in one's portfolio, have both gained interest in the minds of investors. The Farmland Tokenizer will allow for a hedge against inflation and create added diversification.
 </p>
 
 Motivation
 <p> Agricultural land has long been considered to be one of the most secure forms of investment and similarly to gold, farmland is used by many investors as a natural hedge against inflation.
-With the global population expected to reach 9 billion in 2040 the future outlook for land resources looks bright and a case for farmland investment comes down to two words: scarcity and necessity.
+With the global population expected to reach 9 billion in 2040, the future outlook for land resources looks bright and a case for farmland investment comes down to two words: scarcity and necessity.
 According to the US Department of Agriculture the average price of an acre of U.S. cropland has risen about 75% over the last 15 years (NY Times 2021). Moreover, according to Forbes(2021) farmland has delivered a higher average annual return than most asset classes in the last 29 years (1992-2020). 
 
 To summarize in more detail, farmland has:
@@ -62,7 +62,7 @@ pip install matplotlib
 
 ```
 
-In order to run the application you need to set up an Alpaca Markets account and obtain your perosnal API keys. You use these unique identifiers to establish an authenticated, secure connection to an API. For the security reasons you should store your unique API keys in a hidden file called .env This file protects the content of the file by hiding it in the structure of the project. To display hidden files in Jupyterlab run the following command in your terminal:
+In order to run the application you need to set up an Alpaca Markets account and obtain your personal API keys. You use these unique identifiers to establish an authenticated, secure connection to an API. For the security reasons you should store your unique API keys in a hidden file called .env This file protects the content of the file by hiding it in the structure of the project. To display hidden files in Jupyterlab run the following command in your terminal:
 
 ```python
 jupyter lab --ContentsManager.allow_hidden=True
