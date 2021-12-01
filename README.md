@@ -6,6 +6,7 @@
 [Project Description](#Project-Description)<br>
 [Technologies](#Technologies)<br>
 [Installation guide](#Installation-guide) <br>
+[Presentation](#Presentation)<br>
 [Resources](#Resources)<br>
 [Usage](#Usage)<br>
 [Contributors](#Contributors)<br>
@@ -100,8 +101,10 @@ In case of issues, please see the requirements.txt for a complete list of packag
 
 ---
 
-
-
+***
+## <a id="Presentation">Presentation</a>
+Presentation - https://prezi.com/p/u1tyqw1ucs9_/?present=1
+[Presentation](https://prezi.com/p/u1tyqw1ucs9_/?present=1)
 
 ***
 ## <a id="Resources">Resources</a>
