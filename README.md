@@ -136,6 +136,22 @@ Presentation - https://prezi.com/p/u1tyqw1ucs9_/?present=1
 ***
 ## <a id="Usage">Usage</a>
 
+Time Series Model that predicts the price of the US farmland over the next 50 years
+![Prophet Analysis](Images/prophet_price_pred_US_farmland.png)
+
+---
+
+Time Series Model that predicts the yhat, yhat_lower and yhat_upper for the price of farmland in California over the next 15 years
+![ CA Prophet Analysis](Images/forecast_farmland_prices_california.png)
+
+---
+
+LSTM neural netowork model that predicts the price of the Invesco DB Agricultural fund as a proxy for farmland prices
+
+![LSTM](Images/LSTM_model.png)
+
+---
+
 Flask - 
 ```python
   flask run
@@ -154,6 +170,8 @@ Default Purchase Token flask page -
 Purchase Token flask page example - 
 ![Farmland Purchase Token Example 1](Images/farmland_purchase_token_1.png)
 ![Farmland Purchase Token Example 2](Images/farmland_purchase_token_2.png)
+
+---
 
 Streamlit -
 ```python
