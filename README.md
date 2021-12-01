@@ -35,7 +35,20 @@ To summarize in more detail, farmland has:
  Cumulative Returns of Major Asset Classes, Indexed to 1990
   ![image](https://user-images.githubusercontent.com/85215301/142964652-a09d90e0-83b3-4aea-aa37-0fb0a1234b54.png)
 
-  
+
+Farmland as a diversifier:
+Farmland has great returns with very low volatility
+![Farmland Risk Return](Images/farmland_asset_class_risk_return.png)  
+
+Farmland has the best diversification ability when analyzed using return to downside volatility and/or return to maximum drawdown
+![Farmland Diversification Rating](Images/farmland_asset_class_diversification.png)
+
+Dynamic Pricing for Crowdsale:
+change the price per token (increase or decrease) based on demand
+
+Example:
+![Farmland Crowdsale Dynamic Pricing](Images/farmland_crowdsale_dynamic_pricing.png)
+
 
 </p>
 
@@ -122,19 +135,19 @@ Flask -
   flask run
 ```
 
-Default Create Crowdsale flask page - 
-[Farmland Create Crowdsale Default](Images/farmland_create_crowdsale_default_page.png)
+Default Create Crowdsale flask page -
+![Farmland Create Crowdsale Default](Images/farmland_create_crowdsale_default_page.png)
 
-Create Crowdsale flask page example- 
-[Farmland Create Crowdsale Example](Images/farmland_create_crowdsale_page.png)
+Create Crowdsale flask page example - 
+![Farmland Create Crowdsale Example](Images/farmland_create_crowdsale_page.png)
 
 Default Purchase Token flask page - 
-[Farmland Purchase Token Default 1](Images/farmland_purchase_token_default_1.png)
-[Farmland Purchase Token Default 2](Images/farmland_purchase_token_default_2.png)
+![Farmland Purchase Token Default 1](Images/farmland_purchase_token_default_1.png)
+![Farmland Purchase Token Default 2](Images/farmland_purchase_token_default_2.png)
 
 Purchase Token flask page example - 
-[Farmland Purchase Token Example 1](Images/farmland_purchase_token_1.png)
-[Farmland Purchase Token Example 2](Images/farmland_purchase_token_2.png)
+![Farmland Purchase Token Example 1](Images/farmland_purchase_token_1.png)
+![Farmland Purchase Token Example 2](Images/farmland_purchase_token_2.png)
 
 Streamlit -
 ```python
