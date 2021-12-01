@@ -11,20 +11,24 @@ contract FarmlandTokenCrowdsaleDeployer {
 
     // Add the constructor.
     constructor(
-        string memory name,
-        string memory symbol,
-        uint initialSupply,
+        string memory parcelOwner, // Parcel Owner
+        string memory parcelDetails, // Parcel Details
+        uint16 totalAcres,            // Total Acres
+        string memory name, // name of the farmland crowdsale
+        string memory symbol, //symbol of the farmland crowdsale
+        uint initialSupply, // initialSupply of the tokens
         address payable wallet, // sale beneficiary
-        uint goal // the crowdsale goal
+        uint goal,  // the crowdsale goal
+        uint rate_incrementer // dynamic_pricing - price per token will be changed with this incrementer 
     ) public {
         // Create a new instance of the FarmlandToken contract.
-        FarmlandToken token = new FarmlandToken(name, symbol, initialSupply);
+        FarmlandToken token = new FarmlandToken(parcelOwner, parcelDetails, totalAcres, name, symbol, initialSupply);
         
         // Assign the token contract’s address to the `farmland_token_address` variable.
         farmland_token_address = address(token);
 
         // Create a new instance of the `FarmlandTokenCrowdsale` contract
-        FarmlandTokenCrowdsale farmland_crowdsale = new FarmlandTokenCrowdsale(1, wallet, token, goal, now, now + 3 weeks);
+        FarmlandTokenCrowdsale farmland_crowdsale = new FarmlandTokenCrowdsale(1, wallet, token, goal, now, now + 3 weeks, rate_incrementer);
             
         // Aassign the `FarmlandTokenCrowdsale` contract’s address to the `farmland_crowdsale_address` variable.
         farmland_crowdsale_address = address(farmland_crowdsale);

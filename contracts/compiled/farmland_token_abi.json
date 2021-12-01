@@ -3,6 +3,21 @@
 		"inputs": [
 			{
 				"internalType": "string",
+				"name": "parcelOwner",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "parcelDetails",
+				"type": "string"
+			},
+			{
+				"internalType": "uint16",
+				"name": "totalAcres",
+				"type": "uint16"
+			},
+			{
+				"internalType": "string",
 				"name": "name",
 				"type": "string"
 			},
