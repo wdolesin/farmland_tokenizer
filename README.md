@@ -49,6 +49,7 @@ Dynamic Pricing for Crowdsale:
 Example:
 * Price per token changes from $40 per token to $140 per token.
 * Estimated conventional price of farm of $400K ends up earning $900K for the farmer because of the dynamic pricing
+
 ![Farmland Crowdsale Dynamic Pricing](Images/farmland_crowdsale_dynamic_pricing.png)
 
 
