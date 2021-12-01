@@ -2,7 +2,7 @@
 ***
 <a id="Top-of-Page"></a>
 
-## <a id="Contents">Cotents</a>
+## <a id="Contents">Contents</a>
 [Project Description](#Project-Description)<br>
 [Technologies](#Technologies)<br>
 [Installation guide](#Installation-guide) <br>
