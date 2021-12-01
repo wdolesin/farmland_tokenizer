@@ -41,13 +41,13 @@ To summarize in more detail, farmland has:
 
 ***
 ## <a id="Technologies">Technologies</a>
-* [Python](https://docs.python.org/release/3.8.0/)
+* [Python](https://docs.python.org/release/3.8.0/) - Python programming language
 * [Pandas](https://pandas.pydata.org/docs/) - Data analysis and manipulation library.
-* [Matplotlib](https://matplotlib.org/3.1.0/contents.html)
-* [Prophet](https://facebook.github.io/prophet/docs/quick_start.html)
-* [Tensorflow](https://www.tensorflow.org)
-* [Keras](https://keras.io/about/)
-* [Streamlit](https://docs.streamlit.io/library/get-started)
+* [Matplotlib](https://matplotlib.org/3.1.0/contents.html) - Matplotlib is a plotting library for the Python programming language
+* [Prophet](https://facebook.github.io/prophet/docs/quick_start.html) - Prophet is a procedure for forecasting time series data
+* [Tensorflow](https://www.tensorflow.org) - TensorFlow is an end-to-end open source platform for machine learning
+* [Keras](https://keras.io/about/) - Keras is a Python interface for artificial neural networks
+* [Streamlit](https://docs.streamlit.io/library/get-started) - Streamlit is an open-source app framework for Machine Learning and Data Science teams
 * [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) - Web based user interface for data analysis.
 * [Remix](https://remix.ethereum.org/) - Remix is a browser-based compiler and IDE that enables users to build Ethereum contracts with Solidity language and to debug transactions.
 * [Solidity](https://docs.soliditylang.org/) - Solidity is an object-oriented, high-level language for implementing smart contracts. Smart contracts are programs which govern the behaviour of accounts within the Ethereum state.
@@ -93,7 +93,6 @@ Please install the following before starting the application
 ```python
   pip install jupyterlab
   pip install pandas
-  pip install scikit-learn
   pip install hvplot
 
 ```
