@@ -118,11 +118,35 @@ Presentation - https://prezi.com/p/u1tyqw1ucs9_/?present=1
 ***
 ## <a id="Usage">Usage</a>
 
+Flask - 
+```python
+  flask run
+```
+
+Default Create Crowdsale flask page - 
+[Farmland Create Crowdsale Default](Images/farmland_create_crowdsale_default_page.png)
+
+Create Crowdsale flask page example- 
+[Farmland Create Crowdsale Example](Images/farmland_create_crowdsale_page.png)
+
+Default Purchase Token flask page - 
+[Farmland Purchase Token Default 1](Images/farmland_purchase_token_default_1.png)
+[Farmland Purchase Token Default 2](Images/farmland_purchase_token_default_2.png)
+
+Purchase Token flask page example - 
+[Farmland Purchase Token Example 1](Images/farmland_purchase_token_1.png)
+[Farmland Purchase Token Example 2](Images/farmland_purchase_token_2.png)
+
+Streamlit -
+```python
+  streamlit run farmland_token_app.py
+```
+
 ***
 ## <a id="Contributors">Contributors</a>
 * Ksenia Gorska 
 * Kevin Mau 
-* Sangram Singh 
+* Sangram Singh - sangramsinghg@yahoo.com
 * William Olesinski
 
 ***
