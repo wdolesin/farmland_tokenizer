@@ -71,6 +71,7 @@ Example:
 * [Ganache](https://www.trufflesuite.com/ganache) - Quickly fire up a personal Ethereum blockchain which you can use to run tests, execute commands, and inspect state while controlling how the chain operates.
 * [hvplot](https://hvplot.holoviz.org/) - hvPlot provides a high-level plotting API built on HoloViews that provides a general and consistent API for plotting data
 * [Pandas](https://github.com/pandas-dev/pandas) - Data analysis and manipulation library.
+* [web3](https://pypi.org/project/web3/) - A Python library for interacting with Ethereum.
 
 ***
 
@@ -104,12 +105,14 @@ The analysis and price prediction of the Invesco DB Agriculture Fund "DBA" lever
 pip install --upgrade tensorflow
 ```
 
-Please install the following before starting the application
+Please install the following before starting the jupyter lab, streamlit and flask applications
 
 ```python
   pip install jupyterlab
   pip install pandas
   pip install hvplot
+  pip install streamlit
+  pip install web3
 
 ```
 In case of issues, please see the requirements.txt for a complete list of packages with versions needed to run this application
@@ -155,6 +158,13 @@ Purchase Token flask page example -
 Streamlit -
 ```python
   streamlit run farmland_token_app.py
+```
+
+To compile the solidity smart contracts related to crowdsale, please use Remix - 
+Please launch remix by typing the following on the browser:
+
+```python
+https://remix.ethereum.org/
 ```
 
 ***
